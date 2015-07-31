@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace AltBit\Exceptions;
 
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;

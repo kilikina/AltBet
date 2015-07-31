@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace AltBit\Events;
 
 abstract class Event
 {

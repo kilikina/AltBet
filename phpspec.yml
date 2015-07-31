@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: AltBit
+        psr4_prefix: AltBit
         src_path: app

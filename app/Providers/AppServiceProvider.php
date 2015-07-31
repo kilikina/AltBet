@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace AltBit\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
