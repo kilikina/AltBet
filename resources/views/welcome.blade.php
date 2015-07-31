@@ -3,7 +3,7 @@
     <head>
         <title>Laravel</title>
 
-        <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet" type="text/css">
 
         <style>
             html, body {
@@ -32,13 +32,20 @@
 
             .title {
                 font-size: 96px;
+                font-weight: 300;
+            }
+
+            .caption {
+                font-size: 32px;
+                font-style: italic;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">AltBit</div>
+                <div class="caption">Feeling lucky?</div>
             </div>
         </div>
     </body>
