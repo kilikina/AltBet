@@ -4,7 +4,7 @@
         <title>AltBit</title>
 
         <link href="//fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="/css/app.css">
         <style>
             
 
