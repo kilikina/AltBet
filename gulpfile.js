@@ -19,5 +19,5 @@ elixir(function(mix) {
     mix.scripts([
     	'app.js'
     ]);
-    mix.browserfy('index.js');
+    // mix.browserfy('index.js');
 });
