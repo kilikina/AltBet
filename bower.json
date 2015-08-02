@@ -1,0 +1,17 @@
+{
+  "name": "AltBit",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kilikina/AltBit",
+  "authors": [
+    "Kilikina <kilikina@gmx.com>"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
