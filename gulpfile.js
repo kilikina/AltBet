@@ -36,7 +36,7 @@ elixir(function(mix) {
     	'js/jquery.js',
     	'js/bootstrap.js'
     ],
-    'public/assets/js/admin.js',
+    'public/assets/js/app.js',
     'resources/assets'
     );
     // mix.browserfy('index.js');
