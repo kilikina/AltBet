@@ -1,21 +1,28 @@
-var gulp = require('gulp');
-var elixir = require('laravel-elixir');
-
 /*
- | Copy files.
- | 'gulp copyf' after bower updates
+ |
+ | Initialize plugins
  |
  */
-gulp.task('copyf', function() {
-	gulp.src('vendor/bower_components/bootstrap/less/**')
-		.pipe(gulp.dest('resources/assets/less/bootstrap'));
-	gulp.src('vendor/bower_components/bootstrap/dist/js/bootstrap.js')
-		.pipe(gulp.dest('resources/assets/js/'));
-	gulp.src('vendor/bower_components/bootstrap/dist/fonts/**')
-		.pipe(gulp.dest('public/assets/fonts'));
-	gulp.src('vendor/bower_components/jquery/dist/jquery.js')
-		 .pipe(gulp.dest('resources/assets/js/'));
-});
+var gulp = require('gulp');
+
+/*
+ |
+ | Environment configuration
+ |
+ */
+ var config = {
+ 	env: 'prod'
+ }
+
+var elixir = require('laravel-elixir');
+
+var bower = './vendor/bower_components/';
+
+var paths = [
+	bower + 'bootstrap/less',
+	bower + 'bootstrap/fonts'
+];
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -29,15 +36,12 @@ gulp.task('copyf', function() {
 
 elixir(function(mix) {
 	// Compile Less
-    mix.less('app.less').coffee;
-
-    // Combine scripts
-    mix.scripts([
-    	'js/jquery.js',
-    	'js/bootstrap.js'
-    ],
-    'public/assets/js/app.js',
-    'resources/assets'
-    );
+    mix.less('app.less', 'public/css', { paths: paths })
+    	.scripts([
+    		'jquery/dist/jquery.min.js',
+    		'bootstrap/dist/js/bootstrap.min.js',
+    		], 'public/js/vendor.js', bower)
+    	.copy('resources/assets/js/app.js', 'public/js/app.js')
+    	.copy(bower + 'bootstrap/fonts', 'public/fonts');
     // mix.browserfy('index.js');
 });

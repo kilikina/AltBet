@@ -29,7 +29,7 @@
                     <a class="navbar-brand" href="#">{{ config('app.title') }} Admin</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    @include('admin.partials.navbar')
+                     
                 </div>
             </div>
         </nav>
